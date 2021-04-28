@@ -1,0 +1,113 @@
+﻿<Window x:Class="Калькулятор.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Калькулятор"
+        mc:Ignorable="d"
+        Title="Калькулятор обычный" Height="450" Width="800" WindowStyle="ThreeDBorderWindow" VerticalAlignment="Top">
+    <Grid x:Name="Background" RenderTransformOrigin="0.477,0.499" Margin="0,0,2,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="обои 1.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <!--Number Button-->
+        <Button Name="Button1" Content="1" Grid.Row="6" Grid.Column="0" Margin="1.5" Click="Button1_Click"/>
+
+
+        <Button Name="Button2" Content="2" Grid.Row="6" Grid.Column="1" Margin="1.5" Click="Button2_Click"/>
+
+
+        <Button Name="Button3" Content="3" Grid.Row="6" Grid.Column="2" Margin="1.5" Click="Button3_Click"/>
+
+
+        <Button Name="Button4" Content="4" Grid.Row="5" Grid.Column="0" Margin="1.5" Click="Button4_Click"/>
+
+
+        <Button Name="Button5" Content="5" Grid.Row="5" Grid.Column="1" Margin="1.5" Click="Button5_Click"/>
+
+
+        <Button Name="Button6" Content="6" Grid.Row="5" Grid.Column="2" Margin="1.5" Click="Button6_Click"/>
+
+
+        <Button Name="Button7" Content="7" Grid.Row="4" Grid.Column="0" Margin="1.5" Click="Button7_Click"/>
+
+
+        <Button Name="Button8" Content="8" Grid.Row="4" Grid.Column="1" Margin="1.5" Click="Button8_Click"/>
+
+
+        <Button Name="Button9" Content="9" Grid.Row="4" Grid.Column="2" Margin="1.5" Click="Button9_Click"/>
+
+
+        <Button Name="Button10" Content="0" Grid.Row="7" Grid.Column="1" Margin="1.5" Click="Button10_Click"/>
+
+
+        <Button Name="Button11" Content="+/-" Grid.Row="7" Grid.Column="0" Margin="1.5" Click="Button11_Click"/>
+
+
+        <Button Name="Button12" Content="." Grid.Row="7" Grid.Column="2" Margin="1.5" Click="Button12_Click"/>
+
+
+        <Button Name="ButtonRavno" Content="=" Grid.Row="7" Grid.Column="3" Margin="1.5" Click="ButtonRavno_Click"/>
+
+
+        <Button Name="ButtonPlus" Content="+" Grid.Row="6" Grid.Column="3" Margin="1.5" Click="ButtonPlus_Click"/>
+
+
+        <Button Name="ButtonMinus" Content="-" Grid.Row="5" Grid.Column="3" Margin="1.5" Click="ButtonMinus_Click"/>
+
+
+        <Button Name="ButtonUmnoj" Content="*" Grid.Row="4" Grid.Column="3" Margin="1.5" Click="ButtonUmnoj_Click"/>
+
+
+        <Button Name="ButtonDelit" Content="/" Grid.Row="3" Grid.Column="3" Margin="1.5" Click="ButtonDelit_Click"/>
+
+
+        <Button Name="ButtonKoren" Content="√" Grid.Row="3" Grid.Column="2" Margin="1.5" Click="ButtonKoren_Click"/>
+
+
+        <Button Name="ButtonKvadrat" Content="x^2" Grid.Row="3" Grid.Column="1" Margin="1.5" Click="ButtonKvadrat_Click"/>
+
+
+        <Button Name="ButtonDrob" Content="1/x" Grid.Row="3" Grid.Column="0" Margin="1.5" Click="ButtonDrob_Click"/>
+
+
+        <Button Name="ButtonProcent" Content="%" Grid.Row="2" Grid.Column="0" Margin="1.5" Click="ButtonProcent_Click"/>
+
+
+        <Button Name="ButtonCE" Content="CE" Grid.Row="2" Grid.Column="1" Margin="1.5" Click="ButtonCE_Click"/>
+        <Button Name="ButtonC" Content="C" Grid.Row="2" Grid.Column="2" Margin="1.5" Click="ButtonC_Click"/>
+        <Button Name="ButtonStrelka" Content="←" Grid.Row="2" Grid.Column="3" Margin="1.5" Click="ButtonStrelka_Click"/>
+
+        
+        <Label Name="numvvod" Grid.Row="1" Grid.ColumnSpan="4" FontSize="38" VerticalAlignment="Bottom" Foreground="Red" HorizontalAlignment="Right"/>
+        <Label Name="PRIMER" Grid.Row="0" Grid.ColumnSpan="4" FontSize="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="Red" FontFamily="Times New Roman"/>
+        
+        <Separator Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Top"/>
+            <Menu Grid.Row="0" Grid.ColumnSpan="5" VerticalAlignment="Top" Height="20">
+            <MenuItem Header="Калькулятор">
+                <MenuItem Header="Обычный" Name="Obichniy"/>
+                <MenuItem Header="Инженерный" Name="Inzener" Click="Inzener_Click"/>
+                <MenuItem Header="Программист" Name="Programmer" Click="Programmer_Click"/>
+                <MenuItem Header="Выход" Name="exit" Click="Exit_Click"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
